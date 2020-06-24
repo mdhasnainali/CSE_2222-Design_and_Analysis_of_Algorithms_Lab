@@ -30,8 +30,16 @@ int main()
     cin.tie(0), cout.tie(0);
 	//freopen("test.txt","r",stdin);
 
+    ll a;
+    int i,n;
 
-
+    cin>>n;
+    while(n--)
+    {
+        cin>>a;
+        if(a%4==0) cout<<"YES"<<end;
+        else cout<<"NO"<<end;
+    }
 
     return 0;
 }
