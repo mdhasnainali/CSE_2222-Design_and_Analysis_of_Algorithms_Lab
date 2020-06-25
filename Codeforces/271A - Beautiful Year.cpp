@@ -30,7 +30,20 @@ int main()
 	//freopen("test.txt","r",stdin);
 
 
+    int a,b,c,d,n;
+    cin>>n;
+    while(1){
+        n++;
+        a=n%10;
+        b=(n/10)%10;
+        c=((n/10)/10)%10;
+        d=(((n/10)/10)/10);
+        if(a!=b && b!=c && c!=d && a!=d && b!=d && a!=c) break;
+    }
+    cout<<n<<end0;
+
 
 
     return 0;
 }
+

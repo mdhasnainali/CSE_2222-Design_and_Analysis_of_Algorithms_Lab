@@ -10,7 +10,7 @@ using namespace std;
 #define pri(n)          printf("%lld", n)
 #define SORT(x)         sort(x.begin(), x.end())
 #define REV(x)          reverse(x.begin(), x.end())
-#define all(x)          x.begin(), x.end()
+#define all(x)          x.begin(),x.end()
 #define distance(a,b)   (sq(a.x-b.x) + sq(a.y-b.y))
 #define end0            "\n"
 #define end1            cout<<"\n";
@@ -29,6 +29,22 @@ int main()
     cin.tie(0), cout.tie(0);
 	//freopen("test.txt","r",stdin);
 
+
+	ll n,l,b,c,i;
+	string x;
+	cin>>n;
+	while(n--)
+    {
+        cin>>x;
+        l=x.length();
+        b=count(all(x),'1');
+        c=count(all(x),'0');
+        if(b>=c) l=c;
+        else l=b;
+
+        if(l%2==1) cout<<"DA"<<endl;
+        else cout<<"NET"<<endl;
+    }
 
 
 

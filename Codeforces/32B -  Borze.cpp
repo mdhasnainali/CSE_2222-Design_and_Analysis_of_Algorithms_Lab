@@ -29,7 +29,25 @@ int main()
     cin.tie(0), cout.tie(0);
 	//freopen("test.txt","r",stdin);
 
-
+    string x;
+    int l,i;
+    cin>>x;
+    l=x.length();
+    for(i=0;i<l;){
+        if(x[i]=='-' && x[i+1]=='-'){
+            cout<<"2";
+            i=i+2;
+        }
+        else if(x[i]=='-' && x[i+1]=='.'){
+            cout<<"1";
+            i+=2;
+        }
+        else{
+            cout<<"0";
+            i++;
+        }
+    }
+    end1
 
 
     return 0;
