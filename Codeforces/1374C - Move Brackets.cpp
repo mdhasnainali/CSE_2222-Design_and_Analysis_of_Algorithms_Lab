@@ -5,7 +5,7 @@ using namespace std;
 #pragma GCC             optimize ("Ofast")
 #pragma GCC             optimize("O3")
 #define ll              long long
-#define l(i,a,n,x)      for(i=a;i<=n;i=i+x)
+#define lo(i,a,n,x)     for(i=a;i<=n;i=i+x)
 #define sca(n)          scanf("%lld", &n)
 #define pri(n)          printf("%lld", n)
 #define SORT(x)         sort(x.begin(), x.end())
@@ -21,16 +21,32 @@ using namespace std;
 
 
 
-
-
 int main()
 {
-    ios::sync_with_stdio(0);
-    cin.tie(0), cout.tie(0);
+    //ios::sync_with_stdio(0);
+    //cin.tie(0), cout.tie(0);
 	//freopen("test.txt","r",stdin);
 
 
-
+    ll t,i,j,l,a,b;
+    cin>>t;
+    string x;
+    lo(i,1,t,1)
+    {
+        cin>>l>>x;
+        a=0;
+        b=0;
+        lo(j,0,l-1,1){
+            if(x[j]=='(') a++;
+            else a--;
+            if(a<0){
+                b++;
+                a=0;
+            }
+        }
+        cout<<b<<end0;
+    }
 
     return 0;
 }
+
