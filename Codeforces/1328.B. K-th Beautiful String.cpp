@@ -1,4 +1,6 @@
 //MD. HASNAIN ALI (UNSOLVED)
+//I am nobody.
+ 
 #include<bits/stdc++.h>
 using namespace std;
  
@@ -20,11 +22,12 @@ using namespace std;
 #define SORT(x)           sort(x.begin(), x.end())
 #define REV(x)            reverse(x.begin(), x.end())
 #define UNIQUE(v)         (v).erase(unique((v).begin(),(v).end()),(v).end())
+#define REV(x)            reverse(x.begin(), x.end())
 #define all(x)            x.begin(), x.end()
 #define ODD(x)            ((x)&1)==0?(0):(1)
 #define TEST_CASE(t)      for(int z=1;z<=t;z++)
 #define distance(a,b)     (sq(a.x-b.x) + sq(a.y-b.y))
-#define gcd(a, b)         __gcd(a, b)
+#define GCD(a, b)         __gcd(a, b)
 #define lcm(a, b)         (a)*((b)/gcd(a,b))
 #define end0              "\n"
 #define end1              cout<<"\n";
@@ -36,34 +39,29 @@ using namespace std;
  
  
  
- 
 int main()
 {
     ios::sync_with_stdio(0);
     cin.tie(0), cout.tie(0);
-	//freopen("test.txt","r",stdin);
+    //freopen("input-2.txt","r",stdin);
+    //freopen("output-2.txt","w",stdout);
  
- 
-    ll t,i,n,a,b,c,d;
+    ll t;
     cin>>t;
     TEST_CASE(t)
     {
-        cin>>n;
-        ll x[n],y[n];
-        
-        lo(i,0,n-1,1) cin>>x[i];
-        lo(i,0,n-1,1) cin>>y[i];
- 
-        a=x[min_element(x,x+n)-x];
-        b=y[min_element(y,y+n)-y];
- 
-        d=0;
-        lo(i,0,n-1,1){
-            c=((x[i]-a)>(y[i]-b))? (x[i]-a):(y[i]-b);
-            d+=c;
+        int n, k;
+        cin >> n >> k;
+        string s(n, 'a');
+        for (int i = n - 2; i >= 0; i--) {
+            if (k <= (n - i - 1)) {
+                s[i] = 'b';
+                s[n - k] = 'b';
+                cout << s << endl;
+                break;
+            }
+            k -= (n - i - 1);
         }
-        cout<<d<<endl;
- 
     }
  
  

@@ -1,4 +1,6 @@
 //MD. HASNAIN ALI (UNSOLVED)
+//I am nobody.
+ 
 #include<bits/stdc++.h>
 using namespace std;
  
@@ -20,11 +22,12 @@ using namespace std;
 #define SORT(x)           sort(x.begin(), x.end())
 #define REV(x)            reverse(x.begin(), x.end())
 #define UNIQUE(v)         (v).erase(unique((v).begin(),(v).end()),(v).end())
+#define REV(x)            reverse(x.begin(), x.end())
 #define all(x)            x.begin(), x.end()
 #define ODD(x)            ((x)&1)==0?(0):(1)
 #define TEST_CASE(t)      for(int z=1;z<=t;z++)
 #define distance(a,b)     (sq(a.x-b.x) + sq(a.y-b.y))
-#define gcd(a, b)         __gcd(a, b)
+#define GCD(a, b)         __gcd(a, b)
 #define lcm(a, b)         (a)*((b)/gcd(a,b))
 #define end0              "\n"
 #define end1              cout<<"\n";
@@ -36,40 +39,40 @@ using namespace std;
  
  
  
- 
 int main()
 {
     ios::sync_with_stdio(0);
     cin.tie(0), cout.tie(0);
-	//freopen("test.txt","r",stdin);
+    //freopen("input-2.txt","r",stdin);
+    //freopen("output-2.txt","w",stdout);
  
- 
-    vector<int>x;
-    int t,i,n,a,b;
+    ll t;
     cin>>t;
-    TEST_CASE(t)
-    {
-        cin>>n;
-        lo(i,0,n-1,1){
-            cin>>a;
-            x.pb(a);
+    TEST_CASE(t){
+      ll n,i,j,m;
+      int x[26]={0};
+      cin>>n;
+      lo(i,0,n-1,1){
+        string p;
+        cin>>p;
+        m=p.length();
+        lo(j,0,m-1,1){
+          x[p[j]-97]++;
         }
-        sort(all(x));
- 
-        b=1;
- 
-        for(i=0;i<n-1;i++){
-            if(x[i+1]-x[i]>1) {
-                cout<<"NO"<<endl;
-                b=0;
-                break;
-            }
+        p.clear();
+      }
+      lo(i,0,25,1){
+        if((x[i]%n!=0)){
+        cout<<"NO"<<end0;
+        goto A;
         }
-        if(b) cout<<"YES"<<endl;
-        x.clear();
- 
+        //cout<<x[i]<<end0;
+      }
+      
+      cout<<"YES"<<end0;
+      A:
+      ;
     }
- 
- 
+    
     return 0;
 }
