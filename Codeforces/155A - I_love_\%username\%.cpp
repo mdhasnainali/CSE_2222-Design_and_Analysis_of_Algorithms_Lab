@@ -1,9 +1,7 @@
 //MD. HASNAIN ALI (UNSOLVED)
-//I am nobody.
- 
 #include<bits/stdc++.h>
 using namespace std;
- 
+
 #pragma GCC               optimize ("Ofast")
 #pragma GCC               optimize("O3")
 #define ll                long long
@@ -22,47 +20,49 @@ using namespace std;
 #define SORT(x)           sort(x.begin(), x.end())
 #define REV(x)            reverse(x.begin(), x.end())
 #define UNIQUE(v)         (v).erase(unique((v).begin(),(v).end()),(v).end())
-#define REV(x)            reverse(x.begin(), x.end())
 #define all(x)            x.begin(), x.end()
 #define ODD(x)            ((x)&1)==0?(0):(1)
 #define TEST_CASE(t)      for(int z=1;z<=t;z++)
 #define distance(a,b)     (sq(a.x-b.x) + sq(a.y-b.y))
-#define GCD(a, b)         __gcd(a, b)
-#define lcm(a, b)         (a)*((b)/gcd(a,b))
+#define gcd(a, b)         __gcd(a, b)
+#define lcm(a, b)         (a)*((b)/gcd(a,b))
 #define end0              "\n"
 #define end1              cout<<"\n";
 #define pi                acos(-1)
 #define mod               1000000007
 #define inf               999999999999999999
 #define eps               10e-9
- 
- 
- 
- 
+
+
+
+
+
 int main()
 {
     ios::sync_with_stdio(0);
     cin.tie(0), cout.tie(0);
-    //freopen("input-2.txt","r",stdin);
-    //freopen("output-2.txt","w",stdout);
- 
+	//freopen("test.txt","r",stdin);
+
+
+    int n,r,start,end,c=0;
+    cin>>n;
+    n--;
+    cin>>end;
+    start=end;
+    while(n--)
+    {
+        cin>>r;
+        if(r>end) {
+            end=r;
+            c++;
+        }
+        else if(r<start){
+            start=r;
+            c++;
+        }
+    }
+    cout<<c<<endl;
     
-    ll n,m,min,max;
-    cin>>n>>m;
-    
-    
-    ll a=n-m+1;
-    max= a*(a-1)/2;
-    ll b=n/m;
-    ll c=n%m;
-    min=((c*b*(b+1))/2)+(((m-c)*b*(b-1))/2);
-    
-    
-    
-    cout<<min<<" "<<max<<end0;
- 
-    
-    
- 
     return 0;
 }
+
