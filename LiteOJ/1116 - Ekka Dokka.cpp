@@ -1,7 +1,7 @@
 //MD. HASNAIN ALI (UNSOLVED)
 #include<bits/stdc++.h>
 using namespace std;
-
+ 
 #pragma GCC             optimize ("Ofast")
 #pragma GCC             optimize("O3")
 #define ll              long long
@@ -18,16 +18,16 @@ using namespace std;
 #define mod             1000000007
 #define inf             999999999999999999
 #define eps             10e-9
-
-
-
+ 
+ 
+ 
 int main()
 {
     //ios::sync_with_stdio(0);
     //cin.tie(0), cout.tie(0);
-	//freopen("test.txt","r",stdin);
-
-
+    //freopen("test.txt","r",stdin);
+ 
+ 
     ll t,i,j,m;
     ll x;
     cin>>t;
@@ -40,11 +40,11 @@ int main()
                 if((x/j)&1) {
                     cout<<"Case "<<i<<": "<<x/j<<" "<<j<<end0;
                     break;
-                } 
+                }
             }
-        } 
+        }
     }
-
-
+ 
+ 
     return 0;
 }
