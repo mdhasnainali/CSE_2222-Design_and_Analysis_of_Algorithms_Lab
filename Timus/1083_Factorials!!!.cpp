@@ -15,27 +15,23 @@ int main()
 {
     //freopen("test.txt","r",stdin);
 
+    ll s=1;
+    int a,i,l,n;
     string x;
-    int a,b,i;
-    cin>>a>>b>>x;
-
-    while(b--)
+    cin>>a>>x;
+    l=x.length();
+    if(a%l==0) n=l;
+    else n=a%l;
+    for(i=a;i>=n;i=i-l)
     {
-        for(i=0;i<a;i++)
-        {
-            if(x[i]=='B' && x[i+1]=='G')
-            {
-                x[i]='G';
-                x[i+1]='B';
-                i++;
-            }
-        }
+        s=s*i;
     }
+    cout<<s<<end;
 
-    cout<<x<<endl;
 
     return 0;
 }
+
 
 
 
